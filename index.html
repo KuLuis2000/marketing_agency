@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Agencia de Markering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="movil.css" />
+  <script src="https://kit.fontawesome.com/d188054eba.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="responsiveslides.min.js/responsiveslides.min.js"></script>
+  <script src="wow.min.js/wow.min.js"></script>
+  <link rel="stylesheet" href="animate.css/animate.css" />
+  <link rel="stylesheet" href="fancybox.css" />
+  <script src="fancybox.js"></script>
+  <link rel="stylesheet" href="carrousel.css" />
+  <link rel="icon" href="imagenes/icon_web.png">
+</head>
+
+<script>
+  function validarFormulario(event) {
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+    // Obtener los valores de los campos
+    const nombre = document.querySelector('input[name="Usuario"]').value;
+    const email = document.querySelector('input[name="Email"]').value;
+    const contraseña = document.querySelector(
+      'input[name="Contraseña"]'
+    ).value;
+
+    // Expresión regular para validar el formato del email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validaciones
+    if (nombre.trim() === "") {
+      alert("El nombre es obligatorio.");
+      return;
+    }
+
+    if (email.trim() === "") {
+      alert("El email es obligatorio.");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("El formato del email es incorrecto.");
+      return;
+    }
+
+    if (contraseña.trim() === "") {
+      alert("La contraseña es obligatoria.");
+      return;
+    }
+
+    if (contraseña.length < 8) {
+      alert("La contraseña debe tener al menos 8 caracteres.");
+      return;
+    }
+
+    // Si todas las validaciones son exitosas, se envía el formulario
+    document.querySelector("form").submit();
+  }
+</script>
+
+<body>
+  <header id="inicio">
+    <nav id="menu">
+      <div id="icono_menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <figure class="btn_ancla logo">
+        <img src="imagenes/Logo.png" alt="" />
+      </figure>
+      <ul id="contenedor_menu">
+        <li><a class="btn_ancla" href="#about">About us</a></li>
+        <li>
+          <a class="btn_ancla" href="#company">Best Services</a>
+        </li>
+        <li>
+          <a class="btn_ancla" href="#best_numbers">Best Numbers</a>
+        </li>
+        <li><a class="btn_ancla" href="#photos">Gallery</a></li>
+        <li><a class="btn_ancla" href="#members">Members</a></li>
+        <li><a class="btn_ancla" href="#contactar">Contact Us</a></li>
+        <li><a class="btn_ancla" href="#work_process">Work Process</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="slide_fotos">
+    <div class="info_slide_banner">
+      <h3>WE HAVE 24/7 SUPPORTED TEAM</h3>
+      <h1>Best Invest Company <br> Scince 2001</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Perspiciatis ipsa consectetur doloremque
+        architecto, maiores inventore saepe
+        <br> exercitationem fugit repellendus pariatur iste
+      </p>
+    </div>
+    <ul class="rslides">
+      <li><img src="imagenes/slider 1.jpg" alt="" /></li>
+      <li><img src="imagenes/slider 2.webp" alt="" /></li>
+    </ul>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <section class="soluciones ancho">
+      <div class="solve">
+        <div class="icon">
+          <i class="fa-solid fa-headphones"></i>
+        </div>
+        <h1>Solve Solution</h1>
+        <p>
+          Solve solution mission and vision my web site company rather than
+          expanded great busino.
+        </p>
+      </div>
+      <div class="solve">
+        <div class="icon">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <h1>Solve Solution</h1>
+        <p>
+          Solve solution mission and vision my web site company rather than
+          expanded great busino.
+        </p>
+      </div>
+      <div class="solve">
+        <div class="icon">
+          <i class="fa-solid fa-user-large-slash"></i>
+        </div>
+        <h1>Solve Solution</h1>
+        <p>
+          Solve solution mission and vision my web site company rather than
+          expanded great busino.
+        </p>
+      </div>
+    </section>
+  </section>
+
+    <section class="soluciones_2 ancho">
+      <div class="contenedors">
+        <div class="solve_2">
+          <div class="icon">
+            <i class="fa-solid fa-headphones"></i>
+          </div>
+          <h1>Solve Solution</h1>
+          <p>
+            Solve solution mission and vision my web site company rather than
+            expanded great busino.
+          </p>
+        </div>
+        <div class="solve_2">
+          <div class="icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <h1>Solve Solution</h1>
+          <p>
+            Solve solution mission and vision my web site company rather than
+            expanded great busino.
+          </p>
+        </div>
+      </div>
+      <div class="contenedors_2">
+        <div class="solve_2_1">
+          <div class="icon">
+            <i class="fa-solid fa-user-large-slash"></i>
+          </div>
+          <h1>Solve Solution</h1>
+          <p>
+            Solve solution mission and vision my web site company rather than
+            expanded great busino.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="about_us" id="about">
+    <figure>
+      <img src="imagenes/acerca de.png" alt="" />
+    </figure>
+    <div class="info">
+      <h3>ABOUT US</h3>
+      <h1>
+        25+ Years of experience <br />
+        with agency
+      </h1>
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but
+        there are majority have suffered alteration in some form, by injected
+        humour, or futures randomised words which don’t
+      </p>
+      <ul class="menutabs ancho">
+        <li><a href="#Op1" id="btn1" class="link history">Company History</a></li>
+        <li><a href="#Op2" class="link url mission">Our Mission</a></li>
+        <li><a href="#Op3" class="link url vision">Our Vision</a></li>
+      </ul>
+
+      <section id="contenedor_tabs" class="ancho">
+        <article id="Op1">
+          <p class="parrafo">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard my company,
+          </p>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo">
+              <h2>Creative</h2>
+              <div class="more">
+                <i id="flecha" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+
+            <article class="acordeon_contenido">
+              <p>
+                Website Design
+              </p>
+            </article>
+          </div>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo2">
+              <h2>Accounting</h2>
+              <div class="more">
+                <i id="flecha2" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+            <article class="acordeon_contenido">
+              <p>
+                Procedures Guidebook
+              </p>
+            </article>
+          </div>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo3">
+              <h2>Cost</h2>
+              <div class="more">
+                <i id="flecha3" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+            <article class="acordeon_contenido">
+              <p>Accounting Fundamentals</p>
+            </article>
+          </div>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo4">
+              <h2>Corporate</h2>
+              <div class="more">
+                <i id="flecha4" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+            <article class="acordeon_contenido">
+              <p>Cash Management</p>
+            </article>
+          </div>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo5">
+              <h2>SEO</h2>
+              <div class="more">
+                <i id="flecha5" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+            <article class="acordeon_contenido">
+              <p>Optimization Services</p>
+            </article>
+          </div>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo6">
+              <h2>Company</h2>
+              <div class="more">
+                <i id="flecha6" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+            <article class="acordeon_contenido">
+              <p>Brand Solutions</p>
+            </article>
+          </div>
+
+          <div class="ancho acordeon">
+            <div class="acordeon_titulo7">
+              <h2>45-Day</h2>
+              <div class="more">
+                <i id="flecha7" class="fa-solid fa-circle-arrow-down"></i>
+              </div>
+            </div>
+            <article class="acordeon_contenido">
+              <p>Money-Back Guarantee</p>
+            </article>
+          </div>
+        </article>
+        <article id="Op2">
+          <p class="parrafo">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard my company, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Animi atque deleniti dignissimos magni magnam excepturi quia sed distinctio dolorem et voluptate
+            praesentium, alias quasi dicta omnis, voluptatibus iure eum natus.
+          </p>
+
+
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard my company.
+          </p>
+        </article>
+        <article id="Op3">
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years
+          </p>
+          <p>
+            At ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo and inventore veritatis et quasi architecto beatae
+            vitae dicta suntes explicabo. Nemo enim ipsam voluptatem quia
+            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+            magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="company" id="company">
+    <h1>Best Company Services</h1>
+    <p>
+      Dream company ut perspiciatis unde omnis iste natus error sit voluptatem
+      accusantiumes <br />
+      doloremque laudantium, totam rem aperiam eaque busino.
+    </p>
+    <div class="contenedores">
+      <div class="contenedor ancho">
+        <div class="contenido">
+          <div class="icon2">
+            <i class="fa-solid fa-signal"></i>
+          </div>
+          <h1>Marketing Services</h1>
+          <p>
+            Marketing Services Contrary popular belief,Lorem Ipsum is not
+            simply ran text. It has roots in a piece of classical Lat
+            literature from my company dream
+          </p>
+        </div>
+        <div class="contenido">
+          <div class="icon2">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h1>Apps Development</h1>
+          <p>
+            Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+            roots in a piece of classical Lat literature from my company dream
+          </p>
+        </div>
+        <div class="contenido">
+          <div class="icon2">
+            <i class="fa-regular fa-lightbulb"></i>
+          </div>
+          <h1>Visualize Progress</h1>
+          <p>
+            Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+            roots in a piece of classical Lat literature from my company dream
+          </p>
+        </div>
+      </div>
+      <div class="contenedor ancho">
+        <div class="contenido">
+          <div class="icon2">
+            <i class="fas fa-bezier-curve"></i>
+          </div>
+          <h1>Corporate Business</h1>
+          <p>
+            Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+            roots in a piece of classical Lat literature from my company dream
+          </p>
+        </div>
+        <div class="contenido">
+          <div class="icon2">
+            <i class="far fa-handshake"></i>
+          </div>
+          <h1>Service Solutions</h1>
+          <p>
+            Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+            roots in a piece of classical Lat literature from my company dream
+          </p>
+        </div>
+        <div class="contenido">
+          <div class="icon2">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <h1>Creative Consultancy</h1>
+          <p>
+            Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+            roots in a piece of classical Lat literature from my company dream
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="contenedores_2">
+      <div class="contenido marketing">
+        <div class="icon2">
+          <i class="fa-solid fa-signal"></i>
+        </div>
+        <h1>Marketing Services</h1>
+        <p>
+          Marketing Services Contrary popular belief,Lorem Ipsum is not
+          simply ran text. It has roots in a piece of classical Lat
+          literature from my company dream
+        </p>
+      </div>
+      <div class="contenido apps">
+        <div class="icon2">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h1>Apps Development</h1>
+        <p>
+          Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+          roots in a piece of classical Lat literature from my company dream
+        </p>
+      </div>
+      <div class="contenido visualize">
+        <div class="icon2">
+          <i class="fa-regular fa-lightbulb"></i>
+        </div>
+        <h1>Visualize Progress</h1>
+        <p>
+          Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+          roots in a piece of classical Lat literature from my company dream
+        </p>
+      </div>
+      <div class="contenido corporate">
+        <div class="icon2">
+          <i class="fas fa-bezier-curve"></i>
+        </div>
+        <h1>Corporate Business</h1>
+        <p>
+          Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+          roots in a piece of classical Lat literature from my company dream
+        </p>
+      </div>
+      <div class="contenido service">
+        <div class="icon2">
+          <i class="far fa-handshake"></i>
+        </div>
+        <h1>Service Solutions</h1>
+        <p>
+          Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+          roots in a piece of classical Lat literature from my company dream
+        </p>
+      </div>
+      <div class="contenido creative">
+        <div class="icon2">
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <h1>Creative Consultancy</h1>
+        <p>
+          Contrary popular belief,Lorem Ipsum is not simply ran text. It has
+          roots in a piece of classical Lat literature from my company dream
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="best_numbers">
+    <figure>
+      <img src="imagenes/banner degradado.webp" alt="" />
+      <div class="info_company" id="best_numbers">
+        <h1 class="wow animate__animated animate__fadeInDown stadystics h1movil">
+          Your Company Best Numbers
+        </h1>
+        <p class="wow animate__animated animate__fadeInDown stadystics">
+          Dream company ut perspiciatis unde omnis iste natus error sit
+          voluptatem accusantiumes <br />
+          doloremque laudantium, totam rem aperiam eaque busino.
+        </p>
+        <div class="wow animate__animated animate__fadeInUp stadystics stadystics_numbers">
+          <div class="wow animate__animated animate__fadeInUp stadystics_number download">
+            <h1>960 +</h1>
+            <h2>Downloaded</h2>
+            <div class="icon3">
+              <i class="fas fa-tablet-alt"></i>
+            </div>
+          </div>
+          <div class="wow animate__animated animate__fadeInUp stadystics_number projects">
+            <h1>2410 +</h1>
+            <h2>Projects Complete</h2>
+            <div class="icon3">
+              <i class="fab fa-mixcloud"></i>
+            </div>
+          </div>
+          <div class="wow animate__animated animate__fadeInUp stadystics_number behance">
+            <h1>1245 +</h1>
+            <h2>Behance follower</h2>
+            <div class="icon3">
+              <i class="fab fa-behance"></i>
+            </div>
+          </div>
+          <div class="wow animate__animated animate__fadeInUp stadystics_number app">
+            <h1>298 +</h1>
+            <h2>App Build</h2>
+            <div class="icon3">
+              <i class="fas fa-user-alt-slash"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <section id="photos" class="galeria">
+    <h1>Our Wonderful Gallery</h1>
+    <p>
+      Dream company ut perspiciatis unde omnis iste natus error sit voluptatem
+      accusantiumes <br />
+      doloremque laudantium, totam rem aperiam eaque busino.
+    </p>
+
+    <section class="galeria_grid">
+      <a class="foto1" data-fancybox="gallery" data-src="imagenes/gallery 1.jpg" data-caption="FOTO 1 GALERIA">
+        <figure>
+          <img src="imagenes/gallery 1.jpg" alt="" />
+        </figure>
+      </a>
+      <a class="foto2" data-fancybox="gallery" data-src="imagenes/gallery 2.jpg" data-caption="FOTO 2 GALERIA">
+        <figure>
+          <img src="imagenes/gallery 2.jpg" alt="" />
+        </figure>
+      </a>
+      <a class="foto3" data-fancybox="gallery" data-src="imagenes/gallery 3.jpg" data-caption="FOTO 3 GALERIA">
+        <figure>
+          <img src="imagenes/gallery 3.jpg" alt="" />
+        </figure>
+      </a>
+      <a class="foto4" data-fancybox="gallery" data-src="imagenes/gallery 4.jpg" data-caption="FOTO 4 GALERIA">
+        <figure>
+          <img src="imagenes/gallery 4.jpg" alt="" />
+        </figure>
+      </a>
+      <a class="foto5" data-fancybox="gallery" data-src="imagenes/gallery 5.jpg" data-caption="FOTO 5 GALERIA">
+        <figure>
+          <img src="imagenes/gallery 5.jpg" alt="" />
+        </figure>
+      </a>
+      <a class="foto6" data-fancybox="gallery" data-src="imagenes/gallery 6.jpg" data-caption="FOTO 6 GALERIA">
+        <figure>
+          <img src="imagenes/gallery 6.jpg" alt="" />
+        </figure>
+      </a>
+    </section>
+  </section>
+
+  <section class="worked" id="members">
+    <h1>Who Love To Work Together</h1>
+    <p>
+      Dream company ut perspiciatis unde omnis iste natus error sit voluptatem
+      accusantiumes <br />
+      doloremque laudantium, totam rem aperiam eaque busino.
+    </p>
+    <picture class="empleados ancho">
+      <figure class="imagen_empleados marino">
+        <div>
+          <img src="imagenes/worked1.jpg" alt="" />
+          <div class="info_pedorro">
+            <div class="redes">
+              <div class="icono_red">
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+              <div class="icono_red">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+              <div class="icono_red">
+                <i class='fa-brands fa-facebook-f'></i>
+              </div>
+            </div>
+          </div>
+          <div class="letras">
+            <h1>Didong Marino</h1>
+            <h3>WEB DESIGNER</h3>
+          </div>
+        </div>
+      </figure>
+      <figure class="imagen_empleados gelarijon">
+        <div>
+          <img src="imagenes/worked2.jpg" alt="" />
+          <div class="info_pedorro">
+            <div class="redes">
+              <div class="icono_red">
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+              <div class="icono_red">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+              <div class="icono_red">
+                <i class='fa-brands fa-facebook-f'></i>
+              </div>
+            </div>
+          </div>
+          <div class="letras">
+            <h1>Sana Gelarijon</h1>
+            <h3>BUSINESS MAN</h3>
+          </div>
+        </div>
+      </figure>
+      <figure class="imagen_empleados dibala">
+        <div>
+          <img src="imagenes/worked3.jpg" alt="" />
+          <div class="info_pedorro">
+            <div class="redes">
+              <div class="icono_red">
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+              <div class="icono_red">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+              <div class="icono_red">
+                <i class='fa-brands fa-facebook-f'></i>
+              </div>
+            </div>
+          </div>
+          <div class="letras">
+            <h1>Parles Dibala</h1>
+            <h3>SOLVE SOLUTION</h3>
+          </div>
+        </div>
+      </figure>
+      <figure class="imagen_empleados rotna">
+        <div>
+          <img src="imagenes/worked4.jpg" alt="" />
+          <div class="info_pedorro">
+            <div class="redes">
+              <div class="icono_red">
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+              <div class="icono_red">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+              <div class="icono_red">
+                <i class='fa-brands fa-facebook-f'></i>
+              </div>
+            </div>
+          </div>
+          <div class="letras">
+            <h1>Prince Rotna</h1>
+            <h3>MANAGER</h3>
+          </div>
+        </div>
+      </figure>
+    </picture>
+  </section>
+
+  <section class="parrallax">
+    <article class="info2" id="contactar">
+      <h3>WE ARE THE BEST</h3>
+      <h1>We Provide Outsourced IT Services</h1>
+      <p>
+        Minim enim ad minim veniam, quis ercitation ullamco laboris nisi ut
+        aliquip ex ea <br />
+        laboris nisi ut aliquip commodo consequat. Duis aute
+      </p>
+      <div class="modal">
+        <a id="abrir-modal" href="#">Contact With Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+  </section>
+
+  <div id="modal" class="banner-contenedor">
+    <div class="banner-modal">
+      <div class="cierre">
+        <i id="cerrar-modal" class="fa-solid fa-circle-xmark"></i>
+      </div>
+      <form action="" class="formulario" method="post" onsubmit="validarFormulario(event)">
+        <h1>Contact Us</h1>
+        <p>
+          If you have any questions concerning our services, please fill out
+          the <br />
+          contact form below
+        </p>
+        <input type="text" placeholder="Name *" name="Usuario" />
+        <br /><br />
+        <input type="email" placeholder="Email" name="Email" />
+        <br /><br />
+        <input type="password" placeholder="Contraseña" name="Contraseña" />
+        <br /><br />
+        <textarea name="comentario" id="comentario" placeholder="Escribe un comentario..."></textarea>
+        <br /><br />
+        <input type="submit" value="SUBMIT" class="boton" />
+      </form>
+    </div>
+  </div>
+
+  <section class="process" id="work_process">
+    <h1 class="process_titulo">Check Out Our Work Process</h1>
+    <p>
+      Dream company ut perspiciatis unde omnis iste natus error sit voluptatem
+      accusantiumes <br />
+      doloremque laudantium, totam rem aperiam eaque busino.
+    </p>
+    <div class="marketing_process">
+      <div class="process_marketing">
+        <figure>
+          <img src="imagenes/work-process1.jpg" alt="" />
+          <h1>Select A Project</h1>
+        </figure>
+        <figure>
+          <img src="imagenes/work-process2.jpg" alt="" />
+          <h1>Project Analysis</h1>
+        </figure>
+        <figure>
+          <img src="imagenes/work-process3.jpg" alt="" />
+          <h1>Receive Custom</h1>
+        </figure>
+        <figure>
+          <img src="imagenes/work-process4.jpg" alt="" />
+          <h1>Deliver Result</h1>
+        </figure>
+      </div>
+      <article class="video">
+        <div id="contenedor_youtube">
+          <iframe src="https://www.youtube.com/embed/4LmLWpkUVYU?si=5unfxya_74lcWTPw" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </article>
+    </div>
+
+    <br><br>
+    <section id="carousel" class="ancho">
+      <div id="slide-container">
+        <article class="slide" data-slideIndex="0">
+          <figure>
+            <img src="imagenes/carousel5.jpg" alt="">
+          </figure>
+          <h1>Noah Johnson</h1>
+          <h2>Especialista en CEO</h2>
+        </article>
+        <article class="slide" data-slideIndex="1">
+
+          <figure>
+            <img src="imagenes/carousel1.jpg" alt="">
+          </figure>
+          <h1>Olivia Miller</h1>
+          <h2>Especialista en marketing digital</h2>
+        </article>
+        <article class="slide" data-slideIndex="2">
+          <figure>
+            <img src="imagenes/carousel3.jpg" alt="">
+          </figure>
+          <h1>Liam Brown</h1>
+          <h2>Gerente de marca</h2>
+        </article>
+        <article class="slide" data-slideIndex="3">
+          <figure>
+            <img src="imagenes/carousel2.jpg" alt="">
+          </figure>
+          <h1>James Smith</h1>
+          <h2>Especialista en redes sociales</h2>
+        </article>
+        <article class="slide" data-slideIndex="4">
+          <figure>
+            <img src="imagenes/carousel4.jpg" alt="">
+          </figure>
+          <h1>Oliver Williams</h1>
+          <h2>Director de marketing</h2>
+        </article>
+      </div>
+
+
+      <!-- <div class="flechas slide-buttons">
+        <a href="#" id="back-button" class="arrow back"
+          ><i class="fa-solid fa-angle-left"></i
+        ></a>
+        <a href="#" id="forward-button" class="arrow forward"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></a>
+      </div> -->
+
+    </section>
+
+    <a href="#inicio">
+      <i class="ir-arriba fa fa-arrow-up fa-1x"></i>
+    </a>
+
+    <footer>
+      <figure>
+        <img src="imagenes/logo footer.png" alt="">
+      </figure>
+    </footer>
+
+    <!-- FUNCIONA JAVASCRIPT -->
+    <script>
+      // abrir menu
+      $("#icono_menu").click(function () {
+        $("#contenedor_menu").toggleClass("abrir_menu");
+      });
+
+      // despues de click menu cierra menu
+      $(".btn_ancla").click(function () {
+        $("#contenedor_menu").toggleClass("abrir_menu");
+      });
+    </script>
+
+    <script>
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        const slides = document.querySelectorAll(".rslides li");
+        if (index >= slides.length) {
+          currentSlide = 0;
+        } else if (index < 0) {
+          currentSlide = slides.length - 1;
+        } else {
+          currentSlide = index;
+        }
+        slides.forEach((slide, i) => {
+          slide.style.display = i === currentSlide ? "block" : "none";
+        });
+      }
+
+      function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+      }
+
+      // Inicializa el slider mostrando la primera imagen
+      showSlide(currentSlide);
+    </script>
+
+    <script>
+      $("#btn1").addClass("activo");
+      $("#contenedor_tabs article").hide();
+      $("#Op1").show();
+
+      $(".link").click(function name() {
+        $(".link").removeClass("activo");
+        $(this).addClass("activo");
+        $("#contenedor_tabs article").hide();
+
+        var activar_tab = $(this).attr("href");
+        $(activar_tab).show();
+      });
+    </script>
+
+    <script>
+      new WOW().init();
+    </script>
+
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {});
+    </script>
+
+    <script>
+      $("#abrir-modal").click(function () {
+        $("#modal").addClass("mostrar");
+      });
+      $("#cerrar-modal").click(function () {
+        $("#modal").removeClass("mostrar");
+      });
+
+      // por tiempo 5 segundos
+      // function tiempo(){
+      //   $("#modal").addClass("mostrar");
+      // }
+      // setTimeout(tiempo, 5000);
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          $("#modal").removeClass("mostrar");
+        }
+      };
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          $("#modal").removeClass("mostrar");
+        }
+      });
+
+      // function onScroll(){
+      //   const scrollTop = window.scrollY;
+
+      //   if (scrollTop > 600){
+      //       $("#modal").addClass("mostrar");
+      //   }
+      // }
+
+      window.addEventListener("scroll", onScroll);
+    </script>
+
+    <script src="carrousel.js"></script>
+
+    <script>
+      // $(".acordeon_titulo").click(function(){
+      //     $(".acordeon_contenido").slideToggle();
+      // });
+
+      $(".acordeon_titulo").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha").toggleClass("rotar");
+      });
+
+      $(".acordeon_titulo2").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha2").toggleClass("rotar");
+      });
+
+      $(".acordeon_titulo3").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha3").toggleClass("rotar");
+      });
+
+      $(".acordeon_titulo4").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha4").toggleClass("rotar");
+      });
+
+      $(".acordeon_titulo5").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha5").toggleClass("rotar");
+      });
+
+      $(".acordeon_titulo6").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha6").toggleClass("rotar");
+      });
+
+      $(".acordeon_titulo7").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+        $("#flecha7").toggleClass("rotar");
+      });
+
+    </script>
+
+</body>
+
+</html>

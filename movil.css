@@ -1,0 +1,775 @@
+/* IPAD */
+
+@media screen and (max-width: 1200px) {
+  .marketing_process {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video {
+    max-width: 600px;
+    margin-left: 11%;
+    margin-top: 120px;
+  }
+
+  .process_marketing {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .process_marketing figure {
+    width: 190px;
+    height: 190px;
+    padding: 10px;
+    border: 2px var(--pink) solid;
+    border-radius: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .slide_fotos {
+    position: relative;
+    width: 100%;
+    height: 402px; /* Ajusta según tus necesidades */
+    position: relative;
+  }
+
+  .info_slide_banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+  }
+
+  .info_slide_banner h3 {
+    color: var(--pink);
+    line-height: 22px;
+    margin-top: 10%;
+    margin-left: 11%;
+  }
+
+  .info_slide_banner h1 {
+    line-height: 38px;
+    margin-top: 2.5%;
+    margin-left: 11%;
+  }
+
+  .info_slide_banner p {
+    width: 73%;
+    margin-top: 2.5%;
+    margin-left: 11%;
+  }
+
+  nav {
+    position: relative;
+    padding: 15px;
+    z-index: 200;
+  }
+  nav ul {
+    background-color: white;
+    color: #333;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: -120%;
+    transition: all 0.5s linear;
+  }
+  nav ul li {
+    padding: 5px 0px;
+    width: 100%;
+    border-bottom: 2px white dotted;
+    color: white;
+    border: 1px white solid;
+    z-index: 200;
+  }
+  nav ul li a {
+    width: 100%;
+    color: #333;
+    border: 1px white solid;
+    z-index: 2000;
+  }
+
+  #icono_menu {
+    display: flex;
+    color: black;
+  }
+  nav ul.abrir_menu {
+    left: 0;
+  }
+  nav ul.cerrar_menu {
+    left: -120%;
+  }
+
+  .soluciones {
+    display: none;
+  }
+
+  .slide_fotos {
+    position: relative;
+  }
+
+  .soluciones_2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 470px;
+    left: 0;
+  }
+
+  .contenedors {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contenedors_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .solve_2 {
+    width: 40%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.5s linear;
+    box-shadow: 0px 0px 20px #0000005d;
+  }
+  .solve_2_1 {
+    width: 40%;
+    background-color: white;
+    margin-left: -383px;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.5s linear;
+    box-shadow: 0px 0px 20px #0000005d;
+  }
+
+  .solve_2:hover {
+    color: white;
+    background: rgb(251, 56, 132);
+    background: linear-gradient(
+      90deg,
+      rgba(251, 56, 132, 1) 5%,
+      rgba(251, 56, 164, 1) 30%,
+      rgba(165, 17, 137, 1) 50%,
+      rgba(128, 0, 128, 1) 63%,
+      rgba(75, 0, 128, 1) 91%
+    );
+  }
+
+  .solve_2_1:hover {
+    color: white;
+    background: rgb(251, 56, 132);
+    background: linear-gradient(
+      90deg,
+      rgba(251, 56, 132, 1) 5%,
+      rgba(251, 56, 164, 1) 30%,
+      rgba(165, 17, 137, 1) 50%,
+      rgba(128, 0, 128, 1) 63%,
+      rgba(75, 0, 128, 1) 91%
+    );
+  }
+
+  .solve_2 h1 {
+    text-align: left;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .solve_2 p {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .about_us {
+    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menutabs {
+    width: 79%;
+    margin-left: 0;
+  }
+
+  .menutabs li {
+    width: 100%;
+  }
+
+  .menutabs li a {
+    font-size: 15px;
+    padding: 15px 30px;
+  }
+
+  .contenedores {
+    display: none;
+  }
+
+  .contenedores_2 {
+    padding: 30px;
+    width: 100%;
+    display: block;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "marketing apps" "visualize corporate" "service creative";
+  }
+
+  .marketing {
+    grid-area: marketing;
+    width: 100%;
+  }
+
+  .apps {
+    grid-area: apps;
+    width: 100%;
+  }
+
+  .visualize {
+    grid-area: visualize;
+    width: 100%;
+  }
+
+  .corporate {
+    grid-area: corporate;
+    width: 100%;
+  }
+
+  .service {
+    grid-area: service;
+    width: 100%;
+  }
+
+  .creative {
+    grid-area: creative;
+    width: 100%;
+  }
+
+  .best_numbers figure {
+    height: 850px;
+  }
+
+  .info_company h1 {
+    width: 100%;
+  }
+  
+  .info_company p {
+    width: 100%;
+  }
+
+  .stadystics {
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    grid-template-areas: "download projects" "behance app";
+  }
+
+  .download {
+    grid-area: download;
+  }
+
+  .projects {
+    grid-area: projects;
+  }
+
+  .behance {
+    grid-area: behance;
+  }
+
+  .app {
+    grid-area: app;
+  }
+
+  .galeria_grid {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    max-width: 1100px;
+    display: grid;
+    grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6";
+    grid-gap: 15px;
+  }
+
+  .foto1 {
+    grid-area: foto1;
+  }
+
+  .foto2 {
+    grid-area: foto2;
+  }
+
+  .foto3 {
+    grid-area: foto3;
+  }
+
+  .foto4 {
+    grid-area: foto4;
+  }
+
+  .foto5 {
+    grid-area: foto5;
+  }
+
+  .foto6 {
+    grid-area: foto6;
+  }
+
+  .info_pedorro {
+    height: 80.5%;
+  }
+
+  .empleados figure {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-contenedor {
+    z-index: 200;
+  }
+
+  .cierre {
+    right: 14%;
+  }
+
+  .empleados {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-areas: "marino gelarijon" "dibala rotna";
+  }
+
+  .marino {
+    grid-area: marino;
+  }
+
+  .gelarijon {
+    grid-area: gelarijon;
+  }
+
+  .dibala {
+    grid-area: dibala;
+  }
+
+  .rotna {
+    grid-area: rotna;
+  }
+
+  .marketing_process {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: -120px;
+  }
+
+  .process_marketing {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .process_marketing figure {
+    width: 170px;
+    height: 170px;
+    padding: 10px;
+    border: 2px var(--pink) solid;
+    border-radius: 100%;
+  }
+
+  .video {
+    max-width: 600px;
+    margin-left: 11%;
+    margin-top: 120px;
+  }
+
+  #carousel {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .soluciones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 370px;
+    left: 0;
+  }
+
+  .info_slide_banner h3 {
+    color: var(--pink);
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10%;
+    margin-left: 8%;
+  }
+
+  .info_slide_banner h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-top: 2.5%;
+    margin-left: 8%;
+  }
+
+  .info_slide_banner p {
+    font-size: 18px;
+    width: 73%;
+    margin-top: 2.5%;
+    margin-left: 8%;
+  }
+
+  .soluciones_2 {
+    display: none;
+  }
+
+  .solve {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .prev,
+  .next {
+    top: 0%;
+  }
+
+  .about_us {
+    margin-top: 800px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about_us figure {
+    width: 90%;
+  }
+
+  .about_us .info {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #contenedor_tabs {
+    padding: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  #contenedor_tabs article {
+    padding: 0;
+    padding-top: 15px;
+  }
+
+  .acordeon_titulo {
+    padding: 0;
+  }
+
+  .acordeon_titulo2 {
+    padding: 0;
+  }
+
+  .acordeon_titulo3 {
+    padding: 0;
+  }
+
+  .acordeon_titulo4 {
+    padding: 0;
+  }
+
+  .acordeon_titulo5 {
+    padding: 0;
+  }
+
+  .acordeon_titulo6 {
+    padding: 0;
+  }
+
+  .acordeon_titulo7 {
+    padding: 0;
+  }
+
+  .acordeon_contenido {
+    padding: 0;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .menutabs {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "history mission" "vision equis";
+  }
+
+  .history {
+    grid-area: history;
+  }
+
+  .mission {
+    grid-area: mission;
+  }
+
+  .vision {
+    grid-area: vision;
+    margin-left: 0%;
+    margin-top: 30px;
+  }
+
+  .menutabs li a {
+    font-size: 15px;
+    padding: 15px 30px;
+  }
+
+  .contenedores_2 {
+    padding: 30px;
+    width: 100%;
+    display: block;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "marketing" "apps" "visualize" "corporate" "service" "creative";
+  }
+
+  .marketing {
+    grid-area: marketing;
+    width: 100%;
+  }
+
+  .apps {
+    grid-area: apps;
+    width: 100%;
+  }
+
+  .visualize {
+    grid-area: visualize;
+    width: 100%;
+  }
+
+  .corporate {
+    grid-area: corporate;
+    width: 100%;
+  }
+
+  .service {
+    grid-area: service;
+    width: 100%;
+  }
+
+  .creative {
+    grid-area: creative;
+    width: 100%;
+  }
+
+  .contenido {
+    text-align: center;
+  }
+
+  .contenido h1 {
+    text-align: center;
+  }
+
+  .contenido p {
+    text-align: center;
+  }
+
+  .best_numbers figure {
+    height: 1370px;
+  }
+
+  .info_company{
+    width: 100%;
+  }
+
+  .info_company .h1movil {
+    margin-bottom: -30px;
+    width: 100%;
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .stadystics_numbers {
+    margin-top: -30px;
+    display: grid;
+    grid-gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    grid-template-areas: "download" "projects" "behance" "app";
+  }
+
+  .download {
+    grid-area: download;
+    margin-bottom: 30px;
+  }
+
+  .projects {
+    grid-area: projects;
+    margin-bottom: 30px;
+  }
+
+  .behance {
+    grid-area: behance;
+    margin-bottom: 30px;
+  }
+
+  .app {
+    grid-area: app;
+    margin-bottom: 30px;
+  }
+
+  .galeria_grid {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    width: 95%;
+    display: grid;
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6";
+    grid-gap: 15px;
+  }
+
+  .foto1 {
+    grid-area: foto1;
+  }
+
+  .foto2 {
+    grid-area: foto2;
+  }
+
+  .foto3 {
+    grid-area: foto3;
+  }
+
+  .foto4 {
+    grid-area: foto4;
+  }
+
+  .foto5 {
+    grid-area: foto5;
+  }
+
+  .foto6 {
+    grid-area: foto6;
+  }
+
+  .empleados {
+    display: grid;
+    width: 70%;
+    grid-gap: 40px;
+    grid-template-areas: "marino" "gelarijon" "dibala" "rotna";
+  }
+
+  .marino {
+    grid-area: marino;
+    margin: auto !important;
+  }
+
+  .gelarijon {
+    grid-area: gelarijon;
+  }
+
+  .dibala {
+    grid-area: dibala;
+  }
+
+  .rotna {
+    grid-area: rotna;
+  }
+
+  .info_pedorro {
+    height: 100%;
+  }
+
+  .parrallax {
+    height: 500px;
+  }
+
+  .parrallax::before {
+    height: 500px;
+  }
+
+  .cierre {
+    right: 3%;
+    top: 7%;
+  }
+
+  .banner-contenedor {
+    width: 100%;
+    height: 100%;
+  }
+
+  .formulario {
+    padding: 10px;
+  }
+
+  .banner-modal {
+    margin: auto;
+    padding: 20px;
+    border: 1px blue solid;
+    overflow: auto;
+    background-color: white;
+    width: 90%;
+    padding: 0;
+    height: 75vh;
+  }
+
+  .process_titulo {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .process_marketing {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 0px;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  
+  .process_marketing figure {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 2px var(--pink) solid;
+    border-radius: 100%;
+  }
+
+  .video{
+    margin: 0;
+  }
+
+  .logo{
+    width: 40%;
+  }
+
+  .logo img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
