@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -61,9 +61,11 @@ nav ul li a {
   padding: 10px 20px;
   text-decoration: none;
   transition: all 0.5s;
+  border-radius: 10px;
 }
 nav ul li a:hover {
   color: var(--pink);
+  box-shadow: 0px 0px 20px black;
 }
 #icono_menu {
   display: none;
@@ -111,9 +113,9 @@ footer {
   position: relative;
 }
 
-.info_slide_banner{
+.info_slide_banner {
   position: absolute;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   top: 0;
   left: 0;
   color: white;
@@ -122,21 +124,21 @@ footer {
   background-color: rgba(0, 0, 0, 0.534);
 }
 
-.info_slide_banner h3{
+.info_slide_banner h3 {
   color: var(--pink);
   font-size: 25px;
   margin-top: 7%;
   margin-left: 8%;
 }
 
-.info_slide_banner h1{
+.info_slide_banner h1 {
   font-size: 45px;
   line-height: 53px;
   margin-top: 2.5%;
   margin-left: 8%;
 }
 
-.info_slide_banner p{
+.info_slide_banner p {
   margin-top: 2.5%;
   margin-left: 8%;
 }
@@ -257,7 +259,7 @@ footer {
   margin-top: 20px;
 }
 
-.soluciones_2{
+.soluciones_2 {
   display: none;
 }
 
@@ -319,7 +321,7 @@ footer {
   width: 33.33%;
 }
 
-.contenedores_2{
+.contenedores_2 {
   display: none;
 }
 
@@ -438,7 +440,7 @@ footer {
 }
 
 .best_numbers {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   margin-top: 80px;
   position: relative;
@@ -500,19 +502,19 @@ footer {
   grid-template-areas: "download projects behance app";
 }
 
-.download{
+.download {
   grid-area: download;
 }
 
-.projects{
+.projects {
   grid-area: projects;
 }
 
-.behance{
+.behance {
   grid-area: behance;
 }
 
-.app{
+.app {
   grid-area: app;
 }
 
@@ -602,9 +604,10 @@ footer {
   cursor: pointer;
   filter: grayscale(100%);
   transition: all 0.5s linear;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.galeria_grid figure:hover{
+.galeria_grid figure:hover {
   filter: grayscale(0%);
 }
 
@@ -618,7 +621,6 @@ footer {
 
 .galeria_grid figure img:hover {
   transform: scale(1.05);
-  box-shadow: 0px 0px 20px black;
 }
 
 .worked {
@@ -672,7 +674,7 @@ footer {
 }
 
 .parrallax {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   background-image: url(imagenes/parrallax.jpg);
   background-size: cover;
   background-position: center center;
@@ -898,6 +900,7 @@ textarea {
   width: 450px;
   border-radius: 15px;
   position: relative;
+  overflow: hidden;
   transition: all 0.5s linear;
 }
 
@@ -925,19 +928,17 @@ textarea {
     rgba(75, 0, 128, 0.7) 91%
   );
   width: 100%;
-  height: 62.5%;
+  height: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100%;
   z-index: 2;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: all 0.5s linear;
-  opacity: 0;
 }
 
 .info_pedorro h3 {
@@ -977,26 +978,26 @@ textarea {
   font-size: 20px;
 }
 
-.slide h1{
+.slide h1 {
   margin-top: 30px;
   font-size: 30px;
 }
 
-.slide h2{
+.slide h2 {
   margin-top: 20px;
   color: var(--pink);
 }
 
-.flechas{
+.flechas {
   display: none !important;
 }
 
-.listado{
+.listado {
   margin-left: 50px;
   margin-top: 20px;
 }
 
-.acordeon_titulo{
+.acordeon_titulo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1007,16 +1008,16 @@ textarea {
   color: #800000;
 }
 
-.acordeon_contenido{
+.acordeon_contenido {
   padding: 15px;
   display: none;
 }
 
-.acordeon_contenido p{
+.acordeon_contenido p {
   margin-top: -20px;
 }
 
-.acordeon_titulo2{
+.acordeon_titulo2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1026,7 +1027,7 @@ textarea {
   color: #800000;
 }
 
-.acordeon_titulo3{
+.acordeon_titulo3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1036,7 +1037,7 @@ textarea {
   color: #800000;
 }
 
-.acordeon_titulo4{
+.acordeon_titulo4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1046,7 +1047,7 @@ textarea {
   color: #800000;
 }
 
-.acordeon_titulo5{
+.acordeon_titulo5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1056,7 +1057,7 @@ textarea {
   color: #800000;
 }
 
-.acordeon_titulo6{
+.acordeon_titulo6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1066,7 +1067,7 @@ textarea {
   color: #800000;
 }
 
-.acordeon_titulo7{
+.acordeon_titulo7 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1076,45 +1077,45 @@ textarea {
   color: #800000;
 }
 
-.more{
+.more {
   font-size: 25px;
 }
 
-#flecha{
+#flecha {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-#flecha2{
+#flecha2 {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-#flecha3{
+#flecha3 {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-#flecha4{
+#flecha4 {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-#flecha5{
+#flecha5 {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-#flecha6{
+#flecha6 {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-#flecha7{
+#flecha7 {
   transform: rotate(0deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.rotar{
-  transition: all .5s;
+.rotar {
+  transition: all 0.5s;
   transform: rotate(180deg) !important;
 }
 
-footer{
+footer {
   background-color: var(--gray-dark);
   height: auto;
   padding: 20px;

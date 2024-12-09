@@ -335,10 +335,6 @@
     grid-area: foto6;
   }
 
-  .info_pedorro {
-    height: 80.5%;
-  }
-
   .empleados figure {
     width: 100%;
     height: auto;
@@ -695,10 +691,6 @@
 
   .rotna {
     grid-area: rotna;
-  }
-
-  .info_pedorro {
-    height: 100%;
   }
 
   .parrallax {
