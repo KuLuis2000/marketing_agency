@@ -26,9 +26,6 @@
     // Obtener los valores de los campos
     const nombre = document.querySelector('input[name="Usuario"]').value;
     const email = document.querySelector('input[name="Email"]').value;
-    const contraseña = document.querySelector(
-      'input[name="Contraseña"]'
-    ).value;
 
     // Expresión regular para validar el formato del email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -46,16 +43,6 @@
 
     if (!emailRegex.test(email)) {
       alert("El formato del email es incorrecto.");
-      return;
-    }
-
-    if (contraseña.trim() === "") {
-      alert("La contraseña es obligatoria.");
-      return;
-    }
-
-    if (contraseña.length < 8) {
-      alert("La contraseña debe tener al menos 8 caracteres.");
       return;
     }
 
@@ -678,7 +665,8 @@
       <div class="cierre">
         <i id="cerrar-modal" class="fa-solid fa-circle-xmark"></i>
       </div>
-      <form action="" class="formulario" method="post" onsubmit="validarFormulario(event)">
+      <form action="https://formspree.io/f/mzzbqjka"
+ class="formulario" method="post" onsubmit="validarFormulario(event)">
         <h1>Contact Us</h1>
         <p>
           If you have any questions concerning our services, please fill out
@@ -688,8 +676,6 @@
         <input type="text" placeholder="Name *" name="Usuario" />
         <br /><br />
         <input type="email" placeholder="Email" name="Email" />
-        <br /><br />
-        <input type="password" placeholder="Contraseña" name="Contraseña" />
         <br /><br />
         <textarea name="comentario" id="comentario" placeholder="Escribe un comentario..."></textarea>
         <br /><br />
